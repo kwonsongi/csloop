@@ -22,7 +22,8 @@ namespace csloop
             {
                 Console.WriteLine(item);
             }
-            while(true)
+            bool state = true;
+            while(state)
             {
                 ConsoleKeyInfo info = Console.ReadKey();
                 switch (info.Key)
@@ -40,6 +41,7 @@ namespace csloop
                         Console.WriteLine("왼쪽으로 이동");
                         break;
                     case ConsoleKey.X:
+                        state = false;
                         break;
                 }
             }    
